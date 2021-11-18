@@ -8,24 +8,24 @@
 
 	var startUpload = function (files) {
 
-//TODO check if it is csv
-    var file = files[0];
-    var reader = new FileReader();
-    reader.readAsText(file);
-    reader.onload = function(event) {
-      var csvData = event.target.result;
-      var data = $.csv.toArrays(csvData);
-      window.csv = data;
+		//TODO check if it is csv
+		var file = files[0];
+		var reader = new FileReader();
+		reader.readAsText(file);
+		reader.onload = function(event) {
+		var csvData = event.target.result;
+		var data = $.csv.toArrays(csvData);
+		window.csv = data;
 
-      if (data && data.length > 0) {
-        displayHTMLTable();
-      } else {
-          alert('No data to import!');
-      }
-    };
-    reader.onerror = function() {
-        alert('Unable to read ' + file.fileName);
-    };
+		if (data && data.length > 0) {
+		displayHTMLTable();
+		} else {
+		  alert('No data to import!');
+		}
+		};
+		reader.onerror = function() {
+		alert('Unable to read ' + file.fileName);
+		};
 
 	}
 
@@ -54,19 +54,6 @@
 		return false;
 	};
 }());
-
-
-
-function arraysEqual(a, b) {
-    if (a === b) return true;
-    if (a == null || b == null) return false;
-    if (a.length !== b.length) return false;
-
-    for (var i = 0; i < a.length; ++i) {
-      if (a[i] !== b[i]) return false;
-    }
-    return true;
-  }
 
 function displayHTMLTable() {
 
