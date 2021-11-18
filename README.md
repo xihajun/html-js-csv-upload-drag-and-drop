@@ -3,4 +3,4 @@
 Drag and drop for HTML, css, Javacript only. 
 
 
-source: https://github.com/Kalifr/Drag-and-Drop-JavaScript-file-uploader
+Motify source code from: https://github.com/Kalifr/Drag-and-Drop-JavaScript-file-uploader
